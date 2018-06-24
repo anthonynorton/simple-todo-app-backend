@@ -1,0 +1,131 @@
+Name: {
+  name: <String>
+  notes: <Optional>
+  
+}
+Traits
+  Name, If the group decides the trait applies then you lower the difficulty by one
+
+
+Health: {
+  encumbrance: {
+    if your encumbrance is greater than or equal to your hitpoints then you are weary (weary is checked). Typically measured in "stone" (ie. 14lbs)
+  },
+  weary: {
+    boolean,
+    if true increases difficulty by one
+  },
+  hitpoints: {
+    for PCs is 5 + constitution score (constitution is a skill)
+    If you get to 1 hitpoint your difficulty for all checks increases by one. If you go to zero you are incompacitated/uncoscious/etc (the storyteller decides)
+    Below 0 and you are dead.
+    Health can be tracked on a 0.1 level (tenths of a hitpoint) Usually depicted by a dimond shape divided into tenths
+    score: <Number>
+
+  },
+  Armor: {
+    Armor score is subtracted from any damage taken
+  },
+  Shield: {
+    (having a shield) allows you to gain 1 (average) or 2 (great/full-body) skill dice to your defense pool (ie. you can use them in defense rolls)
+  }
+}
+
+Skills: {
+  0-6, each point providing a single die to a given role.
+  ...list skills
+  name: <String>
+  score: <Number>
+}
+
+WeaponSkills: {
+  weapon: <String> name of weapon type
+  score: <Number>
+  damage: <Number> Positive or negative, possibly less than 1 point (ie. 0.1 or 0.01)
+}
+
+Valour: {
+  score: <Number> Usually starts at 6. 0 is minimum. Becomes harder to attain the further one gets from one's natural or base score.
+  base: <Number>
+}
+
+Shadow: {
+  score: <Number> 0 or greater
+  base: <Number> your "resting" score.
+  If your shadow score is equal to or greater than your Valour you are considered Miserable
+}
+
+Miserable: {
+  score: <Boolean>
+  When you become Miserable you must role a Willpower check. If you fail then you have "a bought of madness", and you take on a permanent shadowpoint. If you fail your Willpower check by four or more you lose your character to madness/evil/etc. As long as you are miserable you must make a check once a week.
+}
+
+Geat: {
+  List of stuff you have
+}
+
+BACK OF SHEET
+
+Skills cost: 3
+Virtues cost: 3
+Traits cost: 1
+
+Culture: {
+  Kind of like race
+}
+
+Calling: {
+  Kind of like class
+}
+
+Experience points: {
+  score: <Number> unused
+  total: <Number> spent and unspent 
+}
+
+Holdings: {
+  Land, etc
+}
+
+Treasure: {
+
+}
+
+Standing: {
+  effects influence, etc
+}
+
+Bonds: {
+  emotional/mental connections you have to others.
+}
+
+Fellowship: {
+  If you have bonds with those you are adventuring with you have a shared pool of "Valour points"
+}
+
+Virtues: {
+  Super powerful traits that have special abilities/applications/etc.
+}
+
+Vices: {
+  Permanent shadowpoints (there is a list)... gambler, drug addict, saddist, hot head, etc.
+}
+
+
+Background: {
+  Can be self selected, or given by the storyteller.
+}
+
+
+MORE NOTES:
+How many experience points does a normal player start out with? 30
+
+How are traits determined, when making up a character? Based on Culture, and Calling. You may also chose a trait base on background.
+
+
+My Thoughts On Making It:
+
+Perhaps I should make it possible to attach notes to everything ('Add a note' as an option on right click, or something)
+
+Bonds: Should be able to be positive or negative (ie. you love your battle buddy, and hate your father's murder, or abusive uncle)
+
