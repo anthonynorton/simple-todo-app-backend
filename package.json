@@ -4,7 +4,8 @@
   "description": "`An app to make it easier to play table top rpgs.",
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently \"PORT=3001 nodemon server.js\" \"cd client && yarn start\"",
+    "debug-server": "concurrently \"PORT=3001 nodemon --inspect server.js\" \"cd client && yarn start && cd ..\"",
+    "dev": "concurrently \"PORT=3001 nodemon server.js\" \"cd client && yarn start && cd ..\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
